@@ -1,31 +1,3 @@
-# Mermaid-DBs
-Diagramas de entidade-relacionamento para bancos de dados utilizando o Mermaid.
-
----
-
-## Base Geográfica
-
-```mermaid
-erDiagram
-    Regioes {
-        int IdRegiao PK
-        varchar(2) CodRegiao
-        varchar(20) NomeRegiao
-    }
-    
-    Estados {
-        char(2) SiglaEstado PK
-        varchar(20) NomeEstado
-        varchar(20) NomeCapital
-        int IdRegiao FK
-    }
-
-    Regioes ||--o{ Estados: contains
-```
-
-## Base Comercial
-
-```mermaid
 erDiagram
     Estado_Civil {
         char(1) Cd_Estado_Civil PK
@@ -82,4 +54,3 @@ erDiagram
     Funcionarios ||--o{ Pedidos: processes
     Pedidos ||--o{ Pedidos_Itens: contains
     Produtos ||--o{ Pedidos_Itens: includes
-```
